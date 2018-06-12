@@ -1,1 +1,1 @@
-# mandachopp
+# mandachopp app source
