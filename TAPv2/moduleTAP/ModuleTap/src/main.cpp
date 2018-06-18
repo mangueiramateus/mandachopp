@@ -51,10 +51,8 @@ void setup(){
   pinMode(BTN, INPUT_PULLUP);
   pinMode(VALVE, OUTPUT);
   pinMode(SENSOR, INPUT);
-
-  //!!verificar que RFID e bluetooth estão funcionando
+  //Aviso sonoro de inicialização
   apitar(1, 100);
-  //!!aguardar c
 
 
   //Timer1.initialize(100000);
