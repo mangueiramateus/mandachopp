@@ -1,0 +1,15 @@
+select user from mysql.user; --> mostra os usuarios
+
+show database; --> mostra bancos de dados
+
+use usuarios; - seleciona banco de dados
+
+show tables; --> mostra tabelas do banco de dados selecionado
+
+select * from "tabela"; mostra o conteudo das tabelas
+
+create table "nome da tabela" ("campo principal" INT NOT NULL PRIMARY KEY AUTO_INCREMENT, "campo2" INT, "campo3" VARCHAR("n bytes"), ...) --> cria uma tabela
+
+insert into "nome da tabela"("campo da tabela") value("valor do item"); --> insere um item no banco
+
+update "nome da tabela" set "nome do campo de alteracao" = "valor de alteracao" where "campo de referencia" = "valor de referencia"; --> altera o valor de um campo

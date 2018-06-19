@@ -1,0 +1,27 @@
+<?php
+	require "util/config.php";
+	require "util/lib.php";
+	$tag_id = $_GET["TAG"];
+	$saldo = $_GET["SALDO"];
+	$tap = $_GET["TAP"];
+	$volume = $_GET["VOLUME"];
+	$db = new mysqli($host_db,$user_db,$password_db,$db_name);
+
+	$state = updatebalancebytagid($tag_id, $saldo, $db);
+	resetflag($tag_id, $db);
+	if ($tap != NULL && $volume != NULL) {
+		updatevolume($tap, $volume, $db);
+		
+	}
+	if($state){
+		$saldo = getbalancebytagid($tag_id,$db);
+		
+echo "PI:UPDATE:" . $saldo . "&";
+	}
+	else{
+		echo "PI:FAIL";
+	}
+	$db->close();
+
+?>
+
