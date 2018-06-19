@@ -1,36 +1,38 @@
 FIRMWARE MODULE TAP
-Costrução do firmware para rodar como periférico do tablet, que por sia vez controla todo o sistema. 
+Costruï¿½ï¿½o do firmware para rodar como perifï¿½rico do tablet, que por sia vez controla todo o sistema. 
 Atividades:
-1. INICIALIZAR PERIFÉRICOS - DONE IN 12/JUN
-    > Definir os periféricos da placa e forma de inicialização:
-	>> BUETOOTH -> abertura da comunicação serial (.begin)
-	>> RFID -> inicialização com comandos ao módulo (.init)
-	>> LEDs(vermelho, amarelo, azul e verde) -> definição como saída (pinMode) e desativação (digitalWrite)
-	>> BUZZER -> definição como saída (pinMode) e desativação (digitalWrite)
-	>> BOTAO -> definição como entrada (pinMode)
-	>> SENSOR -> definição como entrada
-	>> VALVULA -> definição como saída (pinMode) e desativação (digitalWrite)
-2. COMUNICAÇÃO BLUETOOTH
-    > Verificar se a comunicação é bem estabelecida para troca de informações
-3. PROTOCOLO DE COMUNICAÇÃO - DONE IN 18/JUN
-    > Protocolo de comunicação definido como os seguintes comandos:
-	ACK ->		TAP1:0:0: => TAP1:OK
-	ECHO ->		TAP1:1:0: => devolve última resposta de comando
-	READ -> 	TAP1:2:0: => TAP1:2:TAG:BTN:OK = ler status do RFID e do botão
-	SENSOR ->	TAP1:3:0: => TAP1:3:OK = desativa interrupção do sensor
-			TAP1:3:1: => TAP1:3:OK = ativa interrupção do sensor
-			TAP1:3:2: => TAP1:3:PULSOS:VAZAO:OK = ler status do sensor
-	VALVES ->	TAP1:4:0: => TAP1:4:OK = ativa válvula
-			TAP1:4:1: => TAP1:4:OK = desativa válvula 
-	FILL -> 	TAP1:5:0: => TAP1:5:OK = desativa modo consumo
-			TAP1:5:PULSOS: => TAP1:5:OK = ativa modo consumo até PULSOS máximo
-	LEDON -> 	TAP1:6:LED?: => TAP1:6:OK = desativa o LED de acordo com o número:
-						0-vermelho, 1-amarelo, 2-azul, 3-verde
-	LEDOFF -> 	TAP1:7:LED: => TAP1:7:OK = ativa o LED de acordo com o número acima
-	BUZZER ->	TAP1:8:N: => TAP1:8:OK = apita o BUZZER N vezes
-	RESET ->	TAP1:9:0: => TAP1:9:OK = reseta o módulo
+1. INICIALIZAR PERIFï¿½RICOS - DONE IN 12/JUN
+	> Definir os perifï¿½ricos da placa e forma de inicializaï¿½ï¿½o:
+	>> BUETOOTH -> abertura da comunicaï¿½ï¿½o serial (.begin)
+	>> RFID -> inicializaï¿½ï¿½o com comandos ao mï¿½dulo (.init)
+	>> LEDs(vermelho, amarelo, azul e verde) -> definiï¿½ï¿½o como saï¿½da (pinMode) e desativaï¿½ï¿½o (digitalWrite)
+	>> BUZZER -> definiï¿½ï¿½o como saï¿½da (pinMode) e desativaï¿½ï¿½o (digitalWrite)
+	>> BOTAO -> definiï¿½ï¿½o como entrada (pinMode)
+	>> SENSOR -> definiï¿½ï¿½o como entrada
+	>> VALVULA -> definiï¿½ï¿½o como saï¿½da (pinMode) e desativaï¿½ï¿½o (digitalWrite)
+2. COMUNICAï¿½ï¿½O BLUETOOTH
+    > Verificar se a comunicaï¿½ï¿½o ï¿½ bem estabelecida para troca de informaï¿½ï¿½es
+3. PROTOCOLO DE COMUNICAï¿½ï¿½O - DONE IN 18/JUN
+    > Protocolo de comunicaï¿½ï¿½o definido como os seguintes comandos:
+	>> ACK ->		TAP1:0:0: => TAP1:OK
+	>> ECHO ->		TAP1:1:0: => devolve ï¿½ltima resposta de comando
+	>> READ -> 		TAP1:2:0: => TAP1:2:TAG:BTN:OK = ler status do RFID e do botï¿½o
+	>> SENSOR ->	TAP1:3:0: => TAP1:3:OK = desativa interrupï¿½ï¿½o do sensor
+	>>>				TAP1:3:1: => TAP1:3:OK = ativa interrupï¿½ï¿½o do sensor
+	>>>				TAP1:3:2: => TAP1:3:PULSOS:VAZAO:OK = ler status do sensor
+	>> VALVES ->	TAP1:4:0: => TAP1:4:OK = ativa vï¿½lvula
+	>>>				TAP1:4:1: => TAP1:4:OK = desativa vï¿½lvula 
+	>> FILL -> 		TAP1:5:0: => TAP1:5:OK = desativa modo consumo
+	>>>				TAP1:5:PULSOS: => TAP1:5:OK = ativa modo consumo atï¿½ PULSOS mï¿½ximo
+	>> LEDON -> 	TAP1:6:LED?: => TAP1:6:OK = desativa o LED de acordo com o nï¿½mero:
+	>>>				0-vermelho, 1-amarelo, 2-azul, 3-verde
+	>> LEDOFF -> 	TAP1:7:LED: => TAP1:7:OK = ativa o LED de acordo com o nï¿½mero acima
+	>> BUZZER ->	TAP1:8:N: => TAP1:8:OK = apita o BUZZER N vezes
+	>> RESET ->		TAP1:9:0: => TAP1:9:OK = reseta o mï¿½dulo
 4. COMANDOS ACK/ECHO - DONE IN 18/JUN
-5. COMANDO READ
+	> Comando ACK e ECHO pronto.
+5. COMANDO READ - DONE IN 18/JUN
+	> Comando READ pronto
 6. COMANDO SENSOR
 7. COMANDO VALVE
 8. COMANDO FILL
@@ -39,15 +41,15 @@ Atividades:
 
 
 APP TABLET ANDROID
-Criação do aplicativo de controle que rodará no tablet
+Criaï¿½ï¿½o do aplicativo de controle que rodarï¿½ no tablet
 1. GERAL
-    1.1 Instalar IDE Android Studio - DONE IN 4/JUN
-    1.2 Criar projeto e diretório GIT - DONE IN 14/JUN
+	1.1 Instalar IDE Android Studio - DONE IN 4/JUN
+	1.2 Criar projeto e diretï¿½rio GIT - DONE IN 14/JUN
 2. TELA INICIALIZAR
-    2.1 Verificar background
-    2.2 Conexão Wifi
-    2.3 Comunicação Servidor
-    2.4 Comunicação Module Tap
+	2.1 Verificar background
+	2.2 Conexï¿½o Wifi
+	2.3 Comunicaï¿½ï¿½o Servidor
+	2.4 Comunicaï¿½ï¿½o Module Tap
 3. TELA PRONTO
 4. TELA LIBERADO
 5. TELA INATIVIDADE
@@ -59,9 +61,9 @@ Criação do aplicativo de controle que rodará no tablet
 SERVIDOR RASPBERRY
 1. ATIVAR BANCO DE DADOS PELO PYTHON
 2. VERIFICAR PENDRIVE 
-3. ALTERAR DIRETÓRIO SALVAMENTO BD
-4. VALIDAÇÃO CÓDIGO ATUAL
-5. COMUNICAÇÃO PHP E PYTHON POR SOCKET
+3. ALTERAR DIRETï¿½RIO SALVAMENTO BD
+4. VALIDAï¿½ï¿½O Cï¿½DIGO ATUAL
+5. COMUNICAï¿½ï¿½O PHP E PYTHON POR SOCKET
 6. SALVAMENTO CLIENTES EM EXCEL
 7. CADASTRO DE NOVAS TAGS
 8. DESLIGAMENTO
